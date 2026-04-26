@@ -1,4 +1,3 @@
-using EasySave.Mocks;
 using EasySave.Models;
 using EasySave.Services;
 
@@ -9,14 +8,9 @@ namespace EasySave.Strategies;
 /// </summary>
 public class DifferentialBackupStrategy : IBackupStrategy
 {
-    // private readonly FileService _fileService = new();
-    // private readonly LogService _logService = LogService.GetInstance();
-    // private readonly StateService _stateService = new();
-
-    // J'ai utilisé des mocks pour faciliter les tests unitaires de cette classe, en isolant les dépendances externes.
-    private readonly MockFileService _fileService = new();
-    private readonly MockLogService _logService = new();
-    private readonly MockStateService _stateService = new();
+    private readonly FileService _fileService = new();
+    private readonly LogService _logService = LogService.GetInstance();
+    private readonly StateService _stateService = new();
 
     public void Execute(BackupJob job)
     {

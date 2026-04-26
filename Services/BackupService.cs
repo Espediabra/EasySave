@@ -13,11 +13,11 @@ public class BackupService
     // Temporary in-memory jobs (to be replaced by config later)
     private readonly List<BackupJob> _jobs = new()
     {
-        new BackupJob("Job1", "C:/TestData/Source1", "C:/TestData/Target1", BackupType.Differential),
-        new BackupJob("Job2", "C:/TestData/Source2", "C:/TestData/Target2", BackupType.Differential),
-        new BackupJob("Job3", "C:/TestData/Source3", "C:/TestData/Target3", BackupType.Full),
-        new BackupJob("Job4", "C:/TestData/Source4", "C:/TestData/Target4", BackupType.Differential),
-        new BackupJob("Job5", "C:/TestData/Source5", "C:/TestData/Target5", BackupType.Full)
+        new BackupJob("Job1", "C:\\Source1", "C:\\Target1", BackupType.Full),
+        new BackupJob("Job2", "C:\\Source2", "C:\\Target2", BackupType.Differential),
+        new BackupJob("Job3", "C:\\Source3", "C:\\Target3", BackupType.Full),
+        new BackupJob("Job4", "C:\\Source4", "C:\\Target4", BackupType.Differential),
+        new BackupJob("Job5", "C:\\Source5", "C:\\Target5", BackupType.Full)
     };
 
     /// <summary>
